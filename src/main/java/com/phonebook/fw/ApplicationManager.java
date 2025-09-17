@@ -34,6 +34,7 @@ public class ApplicationManager{
         WebDriverListener listener = new MyListener();
         driver=new EventFiringDecorator<>(listener).decorate(driver);
 
+
         driver.get("https://telranedu.web.app");
         logger.info("Current url -->" + driver.getCurrentUrl());
         driver.manage().window().maximize();
